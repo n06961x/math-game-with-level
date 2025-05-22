@@ -43,11 +43,29 @@ body {
 
 /* Typography */
 h2 {
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 25px;
-  font-size: 24px;
   text-align: center;
+}
+
+.logo {
+  justify-content: center;
+  text-align: center;
+}
+
+.logo img {
+  border-radius: 50%;
+  object-fit: fill;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .level-description {
