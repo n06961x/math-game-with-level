@@ -1,0 +1,161 @@
+/* Base Styles */
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray-light: #f5f5f7;
+  --gray-dark: #86868b;
+  --gray-darker: #333;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--gray-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 20px;
+}
+
+/* Math Card */
+.math-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.math-card:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography */
+h2 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.level-description {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--gray-dark);
+  font-size: 15px;
+}
+
+/* Level Selector */
+.level-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.level-btn {
+  flex: 1;
+  min-width: 70px;
+  padding: 10px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--gray-light);
+  color: var(--gray-darker);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.level-btn.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Numbers Display */
+.numbers-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.number-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 500;
+  background-color: var(--gray-light);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.number-box.result {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.operator {
+  font-size: 28px;
+  font-weight: 300;
+  padding: 0 5px;
+}
+
+/* Button */
+#generateBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 500;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#generateBtn:hover {
+  opacity: 0.9;
+}
+
+#generateBtn:active {
+  transform: scale(0.98);
+}
+
+/* Animation */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-animation {
+  animation: pop 0.3s ease;
+}
